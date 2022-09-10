@@ -1,0 +1,66 @@
+body {
+    font-family: 'Roboto Slab';
+    color: #324950;
+    background-color: #EDEDED;
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.header {
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.search{
+    background-color: #ffffff;
+    border: 1px solid gray;
+    border-radius: 2px;
+    height: 40px;
+    width: 690px;
+    font-size: 16px;
+    line-height: 24px;
+    background-repeat: no-repeat;
+    background-image: url(../images/home.png);
+    background-position: left 11px center;
+    padding-left: 35px;
+}
+
+.button{
+    padding: 8px 16px;
+    background-color: #ffffff;
+    border: 1px solid gray;
+    box-shadow: 0px 0px 2px rgba(0,0,0,0.015);
+    border-radius: 2px;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.button-prim{
+    background: #1890FF;
+    border: 1px solid #1890FF;
+    color: #fff;
+    margin-right: 10px;
+}
+
+.button-icon{
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.button-text{
+    vertical-align: middle;
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+}
+
+input:focus, button:focus, textarea:focus {
+    outline: none;
+}
+
