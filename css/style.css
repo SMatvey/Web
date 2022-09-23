@@ -253,7 +253,121 @@ input:focus, button:focus, textarea:focus {
     color: #8C8C8C;
 }
 
+.modal {
+    position: fixed;
+    display: flex;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+}
+.is-open {
+    display: flex;
+}
 
+.modal-body{
+    margin-bottom: 52px;
+}
+
+.modal-dialog{
+    max-width: 780px;
+    width: 95%;
+    margin: auto;
+    background: #FFFFFF;
+    border-radius: 5px;
+    padding: 40px 45px;
+}
+
+.modal-title{
+    margin: 0;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+}
+
+.modal-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 45px;
+}
+
+.close{
+    font-size: 34px;
+    border: none;
+    background-color: transparent;
+}
+
+.food-row{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #d9d9d9;
+    margin-bottom: 15px;
+}
+
+.food-name{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+}
+
+.food-price {
+    margin-left: auto;
+    margin-right: 47px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 32px;
+}
+
+.food-counter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.counter{
+    font-size: 16px;
+    line-height: 24px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.counter-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 39px;
+    height: 32px;
+    top: 0px;
+}
+
+.modal-footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer-button{
+    display: flex;
+    align-items: center;
+}
+
+.modal-pricetag {
+    background: #262626;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-size: 20px;
+    padding: 15px 20px;
+    line-height: 24px;
+}
 
 @media (max-width: 1366px){
     .container{
@@ -286,9 +400,6 @@ input:focus, button:focus, textarea:focus {
     }
     .card{
         flex-basis: 49%;
-    }
-    .card-image{
-
     }
     .footer{
         font-size: 16px;
