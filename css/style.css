@@ -253,7 +253,7 @@ input:focus, button:focus, textarea:focus {
     color: #8C8C8C;
 }
 
-.modal {
+.modal, .modal-auth, .modal-prob {
     position: fixed;
     display: flex;
     left: 0;
@@ -263,12 +263,59 @@ input:focus, button:focus, textarea:focus {
     background-color: rgba(0, 0, 0, 0.4);
     display: none;
 }
+
+.modal-auth{
+z-index: 1;
+} 
+.modal-prob{
+z-index: 2;
+}
+
 .is-open {
     display: flex;
 }
 
 .modal-body{
     margin-bottom: 52px;
+}
+
+.modal-body-auth{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    align-content: flex-start;
+}
+
+.label-auth{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    width: 95%;
+    justify-content: space-around;
+}
+
+.input{
+    display: flex;
+    width: 280px;
+    margin-left: auto;
+    margin-right: 50px;
+}
+
+.span{
+    margin-left: 50px;
+}
+
+.user-name{
+    margin-right: 15px;
+    text-decoration: solid;
+    font-family: 'Roboto';
+    font-weight: bold;
+}
+
+.button-out {
+    display: none;
+    margin-left: 10px;
 }
 
 .modal-dialog{
