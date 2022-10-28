@@ -1,16 +1,8 @@
+new WOW().init()
+
 const CartButton = document.querySelector("#cart-button");
 const modal = document.querySelector(".modal");
 const close = document.querySelector(".close");
-
-CartButton.addEventListener('click', ToggleModal);
-close.addEventListener('click', ToggleModal);
-
-function ToggleModal() {
-    modal.classList.toggle("is-open")
-}
-
-new WOW().init()
-
 
 const buttonAuth = document.querySelector('.button-auth');
 const modalAuth = document.querySelector('.modal-auth');
@@ -24,14 +16,25 @@ const buttonOut = document.querySelector('.button-out');
 let login = localStorage.getItem('gloDelivery');
 let password = localStorage.getItem('gloDelivery');
 
-
 const modalProb = document.querySelector('.modal-prob');
 const closeProb = document.querySelector(".close-prob");
+
+
+const cardsRestaurant = document.querySelector('.cards-restaurant');
+const containerPromo = document.querySelector('.container-promo');
+const restaurants = document.querySelector('.restaurants');
+const menu = document.querySelector('.menu');
+const logo = document.querySelector('.logo');
+const cardsMenu = document.querySelector('.cards-menu');
+
+
+function ToggleModal() {
+    modal.classList.toggle("is-open");
+}
 
 function ProbToggleModal() {
     modalProb.classList.toggle("is-open");
 }
-
 
 function LogToggleModal() {
     modalAuth.classList.toggle("is-open");
@@ -121,3 +124,86 @@ function checkAuth(){
 }
 
 checkAuth();
+
+
+function createCardRestaurant() {
+    const card = `
+        <a class="card card-restaurant">
+            <img src="images/card2.jpg" alt="image" class="card-image" />
+            <div class="card-text"> 
+                <div class="card-heading">
+                    <h3 class="card-title">Суши-пицца Абураме</h3>
+                    <span class="card-tag tag">55 мин</span>
+                </div>
+                <div class="card-info">
+                    <div class="rating"> 
+                        <img src="images/rating.png" alt="rating" class="rating-star"> 4.9
+                    </div>
+                    <div class="price">От 1000 грн</div> 
+                    <div class="category">Пицца</div>
+                </div>
+            </div>
+        </a>
+    `;
+
+    cardsRestaurant.insertAdjacentHTML('beforeend', card);
+}
+
+createCardRestaurant();
+createCardRestaurant();
+createCardRestaurant();
+
+function createCartGoods() {
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.insertAdjacentHTML('beforeend', `
+        <img src="images/card1_1.png" alt="image" class="card-image">
+        <div class="card-text">
+            <div class="card-heading">
+                <h3 class="card-title card-title-reg">Ролл угорь стандарт</h3> 
+            </div>
+            <div class="card-info">
+                <div class="ingredients">Рис, угорь, соус унаги, <br> кунжут, водоросли нори.</div>
+            </div>
+            <div class="card-buttons">
+                <button class="button button-prim">
+                    <span class="button-card-text">В корзину</span>
+                    <img src="images/Vector.png" alt="cart" class="button-card-image">
+                </button>
+                <strong class="card-price-bold">250 ₽</strong>
+            </div>
+        </div>
+    `);
+
+    cardsMenu.insertAdjacentElement('beforeend', card);
+}
+
+function openGoods(event) {
+    const target = event.target;
+    if(login) {
+        const restaurant = target.closest('.card-restaurant');
+        if (restaurant) {
+            containerPromo.classList.add('hide');
+            restaurants.classList.add('hide');
+            menu.classList.remove('hide');
+    
+            cardsMenu.textContent='';
+    
+            createCartGoods();
+            createCartGoods();
+            createCartGoods();
+        }
+    } else {
+        LogToggleModal();
+    }
+}
+
+CartButton.addEventListener('click', ToggleModal);
+close.addEventListener('click', ToggleModal);
+
+cardsRestaurant.addEventListener('click', openGoods);
+logo.addEventListener('click', function() {
+    containerPromo.classList.remove('hide');
+    restaurants.classList.remove('hide');
+    menu.classList.add('hide');
+})

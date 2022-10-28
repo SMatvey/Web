@@ -115,8 +115,17 @@ input:focus, button:focus, textarea:focus {
     color: #000000;
 }
 
+.restaurants, .menu{
+    display: flex;
+    flex-direction: column;
+}
 
-.cards, .card-heading, .restourants.card-info {
+.hide {
+    display: none;
+}
+
+
+.cards, .card-heading, .restaurants.card-info {
     display: flex;
     align-items: flex-start; 
     flex-wrap: wrap; 
