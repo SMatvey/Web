@@ -1,5 +1,21 @@
 new WOW().init()
 
+import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js'
+
+new Swiper('.swiper-container', {
+    sliderPerView: 1,
+
+    grabCursor: true,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+        el: '.swiper-pagination',
+    },
+})
+
+
 const CartButton = document.querySelector("#cart-button");
 const modal = document.querySelector(".modal");
 const close = document.querySelector(".close");

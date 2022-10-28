@@ -8,6 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap&subset=cyrillec" 
     rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <script defer src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="/js/wow.min.js"></script>
     <script src="/js/wow.js"></script>
 </head>
@@ -33,40 +35,68 @@
                 </button> 
             </div>      
         </header>
-
-        <section class="container-promo">
-            <section class="prommat  animate__animated animate__bounce">
-                <h1 class="promo-title">Онлайн-сервис <br/>доставки еды на дом</h1>
-                <p class="promo-text">Блюда из любимого ресторана привезет <br/> курьер в перчатках, маске и с антисептиком</p>
-            </section> 
-        </section>  
-
-        <section class="restaurants">
-            <div class="sections-heading">
-                <h2 class="sections-title"> Рестораны </h2>
-                <input type="text" class="imput imput-search" placeholder="Поиск блюд и ресторанов" name="address">
-            </div>
-
-            <div class="cards cards-restaurant">
-                
-            </div>
-        </section>  
-        <section class="menu hide">
-            <div class="section-heading">
-                <h2 class="section-title">Суши-пицца Абураме</h2>
-                <div class="card-info">
-                    <div class="rating">
-                        <img src="images/rating.png" alt="">4.9</div>
-                    <div class="price">От 1000 грн</div>
-                    <div class="category">Пицца и суши</div>
-                </div>
-            </div>
-            
-            <div class="cards cards-menu">
-                    
-            </div>
-        </section> 
     </div> 
+
+    <main class="main">
+        <div class="container">
+            <div class="swiper-container swiper">
+                <section class="container-promo swiper-wrapper">
+                    <section class="prommat pizza swiper-slide">
+                        <h1 class="promo-title">Онлайн-сервис <br />доставки еды на дом</h1>
+                        <p class="promo-text">Блюда из любимого ресторана привезет курьер в перчатках, маске и с антисептиком</p>
+                    </section>
+                    <section class="prommat kebab swiper-slide">
+                        <h1 class="promo-title">Шашлыки на майские <br> со скидкой 35%</h1>
+                        <p class="promo-text">
+                            Закажите шашлыки в любом ресторане до 10 мая и получите скидку по промокоду OMAGAD
+                        </p>
+                    </section>
+                    <section class="prommat vegetables swiper-slide">
+                        <h1 class="promo-title">Скидка 20% на всю еду <br> по промокоду LOVE.JS</h1>
+                        <p class="promo-text">
+                            Блюдо из ресторана привезут вместе с двумя подарочными книгами по фронтенду
+                        </p>
+                    </section>
+                    <section class="prommat sushi swiper-slide">
+                        <h1 class="promo-title">Сеты со скидкой до 30% <br> в ресторанах</h1>
+                        <p class="promo-text">
+                            Скидки на сеты до 30 мая по промокоду DADADA
+                        </p>
+                    </section>
+                </section>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+            <section class="restaurants">
+                <div class="sections-heading">
+                    <h2 class="sections-title"> Рестораны </h2>
+                    <input type="text" class="imput imput-search" placeholder="Поиск блюд и ресторанов" name="address">
+                </div>
+
+                <div class="cards cards-restaurant">
+                    
+                </div>
+            </section>  
+            <section class="menu hide">
+                <div class="section-heading">
+                    <h2 class="section-title">Суши-пицца Абураме</h2>
+                    <div class="card-info">
+                        <div class="rating">
+                            <img src="images/rating.png" alt="">4.9</div>
+                        <div class="price">От 1000 грн</div>
+                        <div class="category">Пицца и суши</div>
+                    </div>
+                </div>
+
+                <div class="cards cards-menu">
+                        
+                </div>
+            </section> 
+        </div>
+    </main>
+    
 
     <footer class="footer">
         <div class="container">
@@ -186,7 +216,6 @@
         </div>
     </div>
 
-
-    <script src="/js/main.js"></script>
+    <script src="/js/main.js" type="module"></script>
 </body>
 </html>

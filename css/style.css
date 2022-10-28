@@ -10,6 +10,11 @@ body {
     margin: auto;
 }
 
+.swiper-wrapper, .swiper-slise, .swiper-slide-active {
+    max-width: 1060px;
+    width: 1060px;
+}
+
 .header {
     margin-top: 44px;
     margin-bottom: 40px;
@@ -76,10 +81,23 @@ input:focus, button:focus, textarea:focus {
 
 .prommat{
     box-shadow: 0px 7px 12px rgba(158, 158, 163, 0.1); 
-    background:#fff1b8 url(../images/promo-images.png) no-repeat top -50px right -250px  / 800px;
     border-radius: 10px; 
     padding: 68px 70px;
     margin-bottom: 56px;
+    width: 1060px;
+}
+
+.pizza {
+    background:#fff1b8 url(../images/promo/promo-images.png) no-repeat top -50px right -250px  / 800px;  
+}
+.kebab {
+    background:#b8ffff url(../images/promo/kebab.png) no-repeat top -50px right -250px  / 800px;  
+}
+.vegetables {
+    background:#b8ffc2 url(../images/promo/vegetables.png) no-repeat top 5px right -150px  / 800px;  
+}
+.sushi {
+    background:#dfb8ff url(../images/promo/sushi.png) no-repeat top -50px right -250px  / 800px;  
 }
 
 .promo-title {
