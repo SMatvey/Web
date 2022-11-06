@@ -157,6 +157,7 @@ input:focus, button:focus, textarea:focus {
     border-radius: 7px;
     overflow: hidden;
     margin-bottom: 30px;
+    max-width: 384px;
 }
 
 .card-image {
