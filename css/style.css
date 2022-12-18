@@ -22,7 +22,7 @@ body {
     justify-content: space-between;
 }
 
-.imput{
+.input{
     background-color: #ffffff;
     border: 1px solid gray;
     border-radius: 2px;
@@ -34,12 +34,12 @@ body {
     background-position: left 11px center;
 }
 
-.imput-address {
+.input-address {
     flex: 0.8;
     background-image: url(../images/home.png);    
 }
 
-.imput-search {
+.input-search {
     background-image: url(../images/search.svg);
     width: 306px;
 }
@@ -291,7 +291,9 @@ input:focus, button:focus, textarea:focus {
     background-color: rgba(0, 0, 0, 0.4);
     display: none;
 }
-
+.modal{
+    z-index: 3;
+}
 .modal-auth{
 z-index: 1;
 } 
@@ -488,7 +490,7 @@ z-index: 2;
     .header{
         flex-wrap: wrap;
     }
-    .imput-address{
+    .input-address{
         margin-top: 15px;
         order: 5;
         flex: 1;
